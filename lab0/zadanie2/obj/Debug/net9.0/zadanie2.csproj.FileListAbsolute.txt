@@ -12,3 +12,4 @@ C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab0\za
 C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab0\zadanie2\obj\Debug\net9.0\zadanie2.pdb
 C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab0\zadanie2\obj\Debug\net9.0\zadanie2.genruntimeconfig.cache
 C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab0\zadanie2\obj\Debug\net9.0\ref\zadanie2.dll
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab0\zadanie2\obj\Debug\net9.0\zadanie2.sourcelink.json

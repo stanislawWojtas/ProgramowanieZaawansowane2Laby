@@ -1,0 +1,15 @@
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.AssemblyInfoInputs.cache
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.AssemblyInfo.cs
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.csproj.CoreCompileInputs.cache
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.sourcelink.json
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\bin\Debug\net9.0\zadanie4.exe
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\bin\Debug\net9.0\zadanie4.deps.json
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\bin\Debug\net9.0\zadanie4.runtimeconfig.json
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\bin\Debug\net9.0\zadanie4.dll
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\bin\Debug\net9.0\zadanie4.pdb
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.dll
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\refint\zadanie4.dll
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.pdb
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\zadanie4.genruntimeconfig.cache
+C:\Users\wstas\Studia\studia semestr 4\Programowanie zaawansowane 2\Laby\lab1\zadanie4\obj\Debug\net9.0\ref\zadanie4.dll

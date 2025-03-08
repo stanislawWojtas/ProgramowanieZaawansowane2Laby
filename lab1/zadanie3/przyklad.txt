@@ -1,0 +1,6 @@
+This is the first example.
+The second example contains the word test.
+The third example also contains the word test.
+The fourth example does not contain the searched word.
+The fifth example contains the word test at the beginning.
+The sixth example contains the word test at the end.

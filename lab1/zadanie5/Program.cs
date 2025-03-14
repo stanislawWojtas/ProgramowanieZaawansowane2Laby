@@ -1,7 +1,7 @@
 ﻿using System.Linq; //potrzebne do Min i Max
 using System;
 
-string filename = "liczby.txt";
+string filename = "../zadanie4/test.txt";
 StreamReader sr = new StreamReader(filename);
 int line_count = 0;
 int char_count = 0;

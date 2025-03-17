@@ -25,7 +25,7 @@ namespace TransakcjeBankowe{
         }
 
         public Transakcja(RachunekBankowy rachunekZrodlowy, RachunekBankowy rachunekDocelowy, decimal kwota, string opis){
-            if(rachunekZrodlowy == null || rachunekDocelowy == null){
+            if(rachunekZrodlowy == null && rachunekDocelowy == null){
                 throw new Exception("Rachunek źródłowy i docelowy nie mogą być null");
             }
             this.rachunekZrodlowy = rachunekZrodlowy;

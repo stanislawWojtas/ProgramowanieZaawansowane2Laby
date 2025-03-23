@@ -19,24 +19,31 @@ public class Program{
     }
 
     static void Main(){
+
         // zwykłe "resources/favorite-tweets.jsonl nie działa nie wiem czemu
         string filePath = Path.Combine("resources", "favorite-tweets.jsonl");
         var tweets = ReadFromJsonl(filePath);
+
+        //zapisannie do xml
         SaveToXML(tweets, "tweets.xml");
+
+        // Odczyt z xml
         var list2 = ReadFromXML("tweets.xml");
+
+        // Posortowana lista tweetów według daty
         var tweetsSortedByDate = SortByDate(tweets);
-        foreach(Tweet tweet in tweets){
-            System.Console.WriteLine(tweet.UserName);
-        }
-        var myDict = UsersToTweets(tweets);
-        System.Console.WriteLine();
         Tweet oldestTweet = tweetsSortedByDate.First();
         Tweet newestTweet = tweetsSortedByDate.Last();
         System.Console.WriteLine($"-----------------------------------\nNajstarszy tweet\nUser: {oldestTweet.UserName}\nText: {oldestTweet.Text}\nCreatedAt: {oldestTweet.CreatedAt}");
         System.Console.WriteLine($"-----------------------------------\nNajnowszy tweet\nUser: {newestTweet.UserName}\nText: {newestTweet.Text}\nCreatedAt: {newestTweet.CreatedAt}");
+        System.Console.WriteLine();
 
+        // Słownik użytkownik -> lista jego tweetów
+        var myDict = UsersToTweets(tweets);
+
+        // Słownnik słowo -> ilość jego wsyąpień
         Dictionary<string, int> wordFreq = CalculateWordsFrequency(tweets);
-        var sortedDict = wordFreq.OrderByDescending(a => a.Value);
+        var sortedDict = wordFreq.OrderByDescending (a => a.Value);
         int i = 0;
         foreach(var word in sortedDict){
             if(word.Key.Length >= 5){
@@ -45,7 +52,17 @@ public class Program{
             }
             if(i > 5)break;
         }
+
+        System.Console.WriteLine();
+
+        // Słownik słowo -> współczynnik IDF
+        Dictionary<string, double> IDF = CalculateIDF(tweets);
+        //metoda Take(5) bierze pierwsze 5 elementów słownika
+        foreach(var kvp in IDF.Take(5)){
+            System.Console.WriteLine($"Słowo: {kvp.Key}, IDF = {kvp.Value}");
+        }
     }
+
     // zwraca listę obiektów Tweet wczytanych z pliku "path"
     public static List<Tweet> ReadFromJsonl(string path){
         List<Tweet> tweets = new List<Tweet>();
@@ -135,5 +152,36 @@ public class Program{
             }
         }
         return freq;
+    }
+
+    public static Dictionary<string, double> CalculateIDF(List<Tweet> tweets){
+        Dictionary<string, double> wordToIDF = new Dictionary<string, double>();
+         
+        int n = tweets.Count;
+        // słownik, który mówi w ilu dokumentach dane słowo występuje
+        Dictionary<string, int> docWithWordCount = new Dictionary<string, int>();
+
+        foreach(Tweet tweet in tweets){
+            HashSet<string> uniqueWords = Regex.Matches(tweet.Text, @"\b[a-zA-Z]+\b").Cast<Match>().Select(m => m.Value.ToLower()).ToHashSet();
+
+            foreach(string word in uniqueWords){
+                if(!docWithWordCount.ContainsKey(word)){
+                    docWithWordCount[word] = 1;
+                }
+                else{
+                    docWithWordCount[word] += 1;
+                }
+            }
+        }
+
+        // Teraz gdy juz mamy w ilu dokumentach występuje dane słowo można obliczyć IDF
+        // IDF(t) = LOG(n/DF(t)) gdzie n to liczba dokumentów (tweetów) a df to w ilu dokumentach dane słowo wysępuje
+        foreach(string key in docWithWordCount.Keys){
+            wordToIDF[key] = Math.Log(n/docWithWordCount[key]);
+        }
+
+        //posortowanie słownika według wartości IDF
+        wordToIDF = wordToIDF.OrderByDescending(a => a.Value).ToDictionary();
+        return wordToIDF;
     }
 }

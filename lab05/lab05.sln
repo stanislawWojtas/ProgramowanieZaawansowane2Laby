@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad_2", "zad_2\zad_2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad_3", "zad_3\zad_3.csproj", "{0750C99B-3963-4668-B8FD-84166E9ECB1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad_4", "zad_4\zad_4.csproj", "{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{0750C99B-3963-4668-B8FD-84166E9ECB1F}.Release|x64.Build.0 = Release|Any CPU
 		{0750C99B-3963-4668-B8FD-84166E9ECB1F}.Release|x86.ActiveCfg = Release|Any CPU
 		{0750C99B-3963-4668-B8FD-84166E9ECB1F}.Release|x86.Build.0 = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|x64.Build.0 = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Debug|x86.Build.0 = Debug|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|x64.ActiveCfg = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|x64.Build.0 = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|x86.ActiveCfg = Release|Any CPU
+		{B516BB16-8FE5-4DD4-A6B6-76862BF6F544}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

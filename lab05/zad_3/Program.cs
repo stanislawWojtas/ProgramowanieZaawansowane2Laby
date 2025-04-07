@@ -3,7 +3,6 @@
 class Program{
     static Mutex mutex = new Mutex();
     static Queue<string> foundFiles = new Queue<string>();
-    static Boolean running = true;
 
     static void SearchForFiles(string path, string word){
         try{
@@ -24,20 +23,12 @@ class Program{
         catch(Exception e){
             System.Console.WriteLine($"Error: {e.Message}");
         }
-        // po przejściu przez wszystkie pliki ustawiamy running na false
-        finally{
-            running = false;
-        }
     }
     static void Main(){
         string path = "folder";
         
         Thread searchThread = new Thread(() => SearchForFiles(path, "ra"));
         searchThread.Start();
-
-        while(running){
-            Thread.Sleep(1000);
-        }
         searchThread.Join();
 
         foreach (string file in foundFiles){

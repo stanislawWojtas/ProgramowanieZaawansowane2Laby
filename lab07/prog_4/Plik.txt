@@ -1,1 +1,1 @@
-TO jest plik tekstowy do zaszyfrowania
+Testowy plik tekstowy

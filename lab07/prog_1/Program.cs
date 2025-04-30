@@ -23,7 +23,7 @@ class Program{
             if(args.Length != 3){
                 throw new ArgumentException("Tryb \"2\" wymaga 3 argumentów");
             }
-            DecrypFile(args[1], args[2]);
+            DecryptFile(args[1], args[2]);
         }
         else{
             throw new ArgumentException("Nieprawidłowy argument");
@@ -67,7 +67,7 @@ class Program{
         Console.WriteLine("Dane zostały zaszyfrowane");   
     }
 
-    public static void DecrypFile(string sourceFile, string targetFile){
+    public static void DecryptFile(string sourceFile, string targetFile){
 
         if(!File.Exists(filePrivateKey)){
             throw new Exception($"Error: brakuje pliku z kluczem prywatnym: {filePrivateKey}");
@@ -83,7 +83,7 @@ class Program{
 
         using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())  
         {  
-            // Set the private key of the algorithm   
+            // Ustawienie klucza prywatnego algorytmy  
             rsa.FromXmlString(privateKey);  
             decryptedData = rsa.Decrypt(encryptedData, false);   
         }  

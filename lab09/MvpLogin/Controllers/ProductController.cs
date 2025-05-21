@@ -6,16 +6,30 @@ public class ProductController : Controller
 {
 	public IActionResult Index()
 	{
+		if (HttpContext.Session.GetString("logged") != "true")
+		{
+			return RedirectToAction("Login", "IO");
+		}
 		var products = DatabaseHelper.GetAllProducts();
 		ViewBag.Products = products;
 		return View();
 	}
 
-	public IActionResult Add() => View();
+	public IActionResult Add() {
+		if (HttpContext.Session.GetString("logged") != "true")
+		{
+			return RedirectToAction("Index");
+		}
+		return View();
+	}
 
 	[HttpPost]
 	public IActionResult Add(IFormCollection form)
 	{
+		if (HttpContext.Session.GetString("logged") != "true")
+		{
+			return RedirectToAction("Index");
+		}
 		string? title = form["title"];
 		string? author = form["author"];
 		string? year = form["year"];

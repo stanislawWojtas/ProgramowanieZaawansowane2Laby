@@ -3,3 +3,21 @@ obj
 *.zip
 *.csproj
 *.sln
+
+# Asp NET 
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+.vscode/
+.vs/
+*.log
+*.mdf
+*.ldf
+*.sqlite
+*.db

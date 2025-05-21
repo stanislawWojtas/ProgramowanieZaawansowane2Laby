@@ -1,0 +1,22 @@
+<h2>Book List</h2>
+<a asp-action="Add">Add New Book</a>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Year</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var p in ViewBag.Products)
+		{
+			<tr>
+				<td>@p.Title</td>
+				<td>@p.Author</td>
+				<td>@p.Year</td>
+			</tr>
+		}
+	</tbody>
+</table>
